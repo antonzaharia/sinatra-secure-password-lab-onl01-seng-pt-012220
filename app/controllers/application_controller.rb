@@ -21,7 +21,9 @@ class ApplicationController < Sinatra::Base
 
     if user.save
       erb :'/account'
-
+    else
+      erb :failure
+    end
   end
 
   get '/account' do
